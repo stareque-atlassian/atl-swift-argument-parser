@@ -9,8 +9,8 @@
 //
 //===----------------------------------------------------------------------===//
 
-import ArgumentParser
-import ArgumentParserToolInfo
+import AtlArgumentParser
+import AtlArgumentParserToolInfo
 
 extension CommandInfoV0 {
   func manualPageFileName(section: Int) -> String {

@@ -9,8 +9,8 @@
 //
 //===----------------------------------------------------------------------===//
 
-import ArgumentParser
-import ArgumentParserToolInfo
+import AtlArgumentParser
+import AtlArgumentParserToolInfo
 
 struct Container: MDocComponent {
   var ast: [MDocASTNode] { children.flatMap { $0.ast } }

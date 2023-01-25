@@ -3,7 +3,7 @@ add_executable(math
 target_compile_options(math PRIVATE
   -parse-as-library)
 target_link_libraries(math PRIVATE
-  ArgumentParser
+  AtlArgumentParser
   $<$<STREQUAL:${CMAKE_SYSTEM_NAME},Linux>:m>)
 
 add_executable(repeat
@@ -11,10 +11,10 @@ add_executable(repeat
 target_compile_options(repeat PRIVATE
   -parse-as-library)
 target_link_libraries(repeat PRIVATE
-  ArgumentParser)
+  AtlArgumentParser)
 
 add_executable(roll
   roll/main.swift
   roll/SplitMix64.swift)
 target_link_libraries(roll PRIVATE
-  ArgumentParser)
+  AtlArgumentParser)

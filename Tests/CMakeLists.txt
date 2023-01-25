@@ -1,2 +1,2 @@
-add_subdirectory(ArgumentParserEndToEndTests)
-add_subdirectory(ArgumentParserUnitTests)
+add_subdirectory(AtlArgumentParserEndToEndTests)
+add_subdirectory(AtlArgumentParserUnitTests)

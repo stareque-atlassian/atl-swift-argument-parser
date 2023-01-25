@@ -9,7 +9,7 @@
 //
 //===----------------------------------------------------------------------===//
 
-import ArgumentParser
+import AtlArgumentParser
 import Foundation
 
 extension Date: ExpressibleByArgument {

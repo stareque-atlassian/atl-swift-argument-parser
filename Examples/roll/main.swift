@@ -9,7 +9,7 @@
 //
 //===----------------------------------------------------------------------===//
 
-import ArgumentParser
+import AtlArgumentParser
 
 struct RollOptions: ParsableArguments {
     @Option(help: ArgumentHelp("Rolls the dice <n> times.", valueName: "n"))

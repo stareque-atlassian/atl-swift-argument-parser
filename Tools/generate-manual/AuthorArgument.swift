@@ -9,8 +9,8 @@
 //
 //===----------------------------------------------------------------------===//
 
-import ArgumentParser
-import ArgumentParserToolInfo
+import AtlArgumentParser
+import AtlArgumentParserToolInfo
 
 fileprivate extension Character {
   static let emailStart: Character = "<"

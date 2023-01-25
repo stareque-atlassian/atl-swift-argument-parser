@@ -9,8 +9,8 @@
 //
 //===----------------------------------------------------------------------===//
 
-import ArgumentParser
-import ArgumentParserToolInfo
+import AtlArgumentParser
+import AtlArgumentParserToolInfo
 
 struct Name: MDocComponent {
   var command: CommandInfoV0

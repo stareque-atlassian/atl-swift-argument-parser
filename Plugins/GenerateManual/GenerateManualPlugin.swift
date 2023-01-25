@@ -64,8 +64,8 @@ struct GenerateManualPlugin: CommandPlugin {
       guard let product = builtArtifact.matchingProduct(context: context)
       else { continue }
 
-      // Skip products without a dependency on ArgumentParser.
-      guard product.hasDependency(named: "ArgumentParser") else { continue }
+      // Skip products without a dependency on AtlArgumentParser.
+      guard product.hasDependency(named: "AtlArgumentParser") else { continue }
 
       // Get the artifacts name.
       let executableName = builtArtifact.path.lastComponent

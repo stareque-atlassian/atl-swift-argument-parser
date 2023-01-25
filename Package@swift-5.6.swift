@@ -13,11 +13,11 @@
 import PackageDescription
 
 var package = Package(
-    name: "swift-argument-parser",
+    name: "atl-swift-argument-parser",
     products: [
         .library(
-            name: "ArgumentParser",
-            targets: ["ArgumentParser"]),
+            name: "AtlArgumentParser",
+            targets: ["AtlArgumentParser"]),
         .plugin(
             name: "GenerateManual",
             targets: ["GenerateManual"]),
@@ -26,15 +26,15 @@ var package = Package(
     targets: [
         // Core Library
         .target(
-            name: "ArgumentParser",
-            dependencies: ["ArgumentParserToolInfo"],
+            name: "AtlArgumentParser",
+            dependencies: ["AtlArgumentParserToolInfo"],
             exclude: ["CMakeLists.txt"]),
         .target(
-            name: "ArgumentParserTestHelpers",
-            dependencies: ["ArgumentParser", "ArgumentParserToolInfo"],
+            name: "AtlArgumentParserTestHelpers",
+            dependencies: ["AtlArgumentParser", "AtlArgumentParserToolInfo"],
             exclude: ["CMakeLists.txt"]),
         .target(
-            name: "ArgumentParserToolInfo",
+            name: "AtlArgumentParserToolInfo",
             dependencies: [ ],
             exclude: ["CMakeLists.txt"]),
 
@@ -50,42 +50,42 @@ var package = Package(
         // Examples
         .executableTarget(
             name: "roll",
-            dependencies: ["ArgumentParser"],
+            dependencies: ["AtlArgumentParser"],
             path: "Examples/roll"),
         .executableTarget(
             name: "math",
-            dependencies: ["ArgumentParser"],
+            dependencies: ["AtlArgumentParser"],
             path: "Examples/math"),
         .executableTarget(
             name: "repeat",
-            dependencies: ["ArgumentParser"],
+            dependencies: ["AtlArgumentParser"],
             path: "Examples/repeat"),
 
         // Tools
         .executableTarget(
             name: "generate-manual",
-            dependencies: ["ArgumentParser", "ArgumentParserToolInfo"],
+            dependencies: ["AtlArgumentParser", "AtlArgumentParserToolInfo"],
             path: "Tools/generate-manual"),
     
         // Tests
         .testTarget(
-            name: "ArgumentParserEndToEndTests",
-            dependencies: ["ArgumentParser", "ArgumentParserTestHelpers"],
+            name: "AtlArgumentParserEndToEndTests",
+            dependencies: ["AtlArgumentParser", "AtlArgumentParserTestHelpers"],
             exclude: ["CMakeLists.txt"]),
         .testTarget(
-            name: "ArgumentParserExampleTests",
-            dependencies: ["ArgumentParserTestHelpers"],
+            name: "AtlArgumentParserExampleTests",
+            dependencies: ["AtlArgumentParserTestHelpers"],
             resources: [.copy("CountLinesTest.txt")]),
         .testTarget(
-            name: "ArgumentParserGenerateManualTests",
-            dependencies: ["ArgumentParserTestHelpers"]),
+            name: "AtlArgumentParserGenerateManualTests",
+            dependencies: ["AtlArgumentParserTestHelpers"]),
         .testTarget(
-            name: "ArgumentParserPackageManagerTests",
-            dependencies: ["ArgumentParser", "ArgumentParserTestHelpers"],
+            name: "AtlArgumentParserPackageManagerTests",
+            dependencies: ["AtlArgumentParser", "AtlArgumentParserTestHelpers"],
             exclude: ["CMakeLists.txt"]),
         .testTarget(
-            name: "ArgumentParserUnitTests",
-            dependencies: ["ArgumentParser", "ArgumentParserTestHelpers"],
+            name: "AtlArgumentParserUnitTests",
+            dependencies: ["AtlArgumentParser", "AtlArgumentParserTestHelpers"],
             exclude: ["CMakeLists.txt"]),
     ]
 )
@@ -95,13 +95,13 @@ package.targets.append(contentsOf: [
     // Examples
     .executableTarget(
         name: "count-lines",
-        dependencies: ["ArgumentParser"],
+        dependencies: ["AtlArgumentParser"],
         path: "Examples/count-lines"),
 
     // Tools
     .executableTarget(
         name: "changelog-authors",
-        dependencies: ["ArgumentParser"],
+        dependencies: ["AtlArgumentParser"],
         path: "Tools/changelog-authors"),
     ])
 #endif

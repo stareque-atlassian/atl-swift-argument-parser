@@ -62,7 +62,7 @@ The 1.2.1 release includes contributions from [Chamepp], [kkk669], [mtj0928],
 ### Fixes
 
 - Invalid `init(from:)` decoding initializers are now correctly diagnosed by
-  ArgumentParser's validators. ([#487])
+  AtlArgumentParser's validators. ([#487])
 - Default values are now correctly displayed as flags for `@Flag` properties
   with inversions or `EnumerableFlag` types. ([#486])
 - The help display for non-string-backed raw representable types has been
@@ -79,7 +79,7 @@ The 1.2.0 release includes contributions from [allevato], [clayellis],
 [compnerd], [d-ronnqvist], [natecook1000], [randomeizer], and [rauhul].
 Thank you!
 
-[arrayparse-docs]: https://swiftpackageindex.com/apple/swift-argument-parser/documentation/argumentparser/argumentarrayparsingstrategy
+[arrayparse-docs]: https://swiftpackageindex.com/apple/swift-argument-parser/documentation/AtlArgumentParser/argumentarrayparsingstrategy
 
 ---
 
@@ -124,7 +124,7 @@ The 1.1.4 release includes contributions from [ian-twilightcoder],
 
 ### Additions
 
-- `ArgumentParser` now includes a SwiftPM plugin for generating `man` pages.
+- `AtlArgumentParser` now includes a SwiftPM plugin for generating `man` pages.
   Explore the functionality and configuration by running
   `swift package plugin experimental-generate-manual --help` from your package
   root. ([#332])
@@ -144,7 +144,7 @@ The 1.1.3 release includes contributions from [keith], [KeithBird],
 
 ### Changes
 
-- CMake builds now always statically links `ArgumentParserToolInfo`. 
+- CMake builds now always statically links `AtlArgumentParserToolInfo`. 
   ([#424])
 
 ### Fixes
@@ -179,7 +179,7 @@ Thank you!
 
 ### Changes
 
-- `ArgumentParser` now requires Swift 5.5.
+- `AtlArgumentParser` now requires Swift 5.5.
 
 ### Fixes
 
@@ -201,7 +201,7 @@ The 1.1.0 release includes contributions from [keith], [MartinP7r], [McNight],
 ### Changes
 
 - When a user provides an incorrect value for an option, an 
-  `ArgumentParser`-based program now includes the valid values when possible.
+  `AtlArgumentParser`-based program now includes the valid values when possible.
 
     ```
     $ example --format png
@@ -214,7 +214,7 @@ The 1.1.0 release includes contributions from [keith], [MartinP7r], [McNight],
 - Resolves an issue with `zsh` custom completions for command names that include
   a dash.
 - Improves the generated completions scripts for `fish`.
-- Resolves issues that prevented building `ArgumentParser` for WebAssembly using
+- Resolves issues that prevented building `AtlArgumentParser` for WebAssembly using
   SwiftWasm toolchains.
 - Improved window size handling on Windows.
 - Fixed a crash when using `--experimental-dump-help` with commands that provide
@@ -250,11 +250,11 @@ The 1.0.1 release includes a contribution from [imxieyi]. Thank you!
 ## [1.0.0] - 2021-09-10
 
 The 1.0 release marks an important milestone —
-`ArgumentParser` is now source stable!
+`AtlArgumentParser` is now source stable!
 
 ### Changes
 
-- `ArgumentParser` now provides a DocC documentation catalog, so you
+- `AtlArgumentParser` now provides a DocC documentation catalog, so you
   can view rendered articles and symbol documentation directly within
   Xcode.
 
@@ -271,7 +271,7 @@ The 1.0 release marks an important milestone —
 
 - When a user doesn't provide a required argument, the error message now
   includes that argument's help text. ([#324])
-- Command-line tools built with `ArgumentParser` now include an experimental
+- Command-line tools built with `AtlArgumentParser` now include an experimental
   flag to dump command/argument/help information as JSON:
   `--experimental-dump-help`. ([#310])
 
@@ -721,7 +721,7 @@ The 0.0.3 release includes contributions from [compnerd], [elliottwilliams],
 - The `EX_USAGE` exit code is now used for validation errors.
 - The parser provides near-miss suggestions when a user provides an unknown
   option.
-- `ArgumentParser` now builds on Windows.
+- `AtlArgumentParser` now builds on Windows.
 - You can throw an `ExitCode` error to exit without printing any output.
 - You can now create optional Boolean flags with inversions that default to 
   `nil`:
@@ -756,7 +756,7 @@ The 0.0.2 release includes contributions from [AliSoftware], [buttaface],
 
 ## [0.0.1] - 2020-02-27
 
-- `ArgumentParser` initial release.
+- `AtlArgumentParser` initial release.
 
 ---
 

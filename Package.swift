@@ -13,58 +13,58 @@
 import PackageDescription
 
 var package = Package(
-    name: "swift-argument-parser",
+    name: "atl-swift-argument-parser",
     products: [
         .library(
-            name: "ArgumentParser",
-            targets: ["ArgumentParser"]),
+            name: "AtlArgumentParser",
+            targets: ["AtlArgumentParser"]),
     ],
     dependencies: [],
     targets: [
         // Core Library
         .target(
-            name: "ArgumentParser",
-            dependencies: ["ArgumentParserToolInfo"],
+            name: "AtlArgumentParser",
+            dependencies: ["AtlArgumentParserToolInfo"],
             exclude: ["CMakeLists.txt"]),
         .target(
-            name: "ArgumentParserTestHelpers",
-            dependencies: ["ArgumentParser", "ArgumentParserToolInfo"],
+            name: "AtlArgumentParserTestHelpers",
+            dependencies: ["AtlArgumentParser", "AtlArgumentParserToolInfo"],
             exclude: ["CMakeLists.txt"]),
         .target(
-            name: "ArgumentParserToolInfo",
+            name: "AtlArgumentParserToolInfo",
             dependencies: [],
             exclude: ["CMakeLists.txt"]),
 
         // Examples
         .executableTarget(
             name: "roll",
-            dependencies: ["ArgumentParser"],
+            dependencies: ["AtlArgumentParser"],
             path: "Examples/roll"),
         .executableTarget(
             name: "math",
-            dependencies: ["ArgumentParser"],
+            dependencies: ["AtlArgumentParser"],
             path: "Examples/math"),
         .executableTarget(
             name: "repeat",
-            dependencies: ["ArgumentParser"],
+            dependencies: ["AtlArgumentParser"],
             path: "Examples/repeat"),
 
         // Tests
         .testTarget(
-            name: "ArgumentParserEndToEndTests",
-            dependencies: ["ArgumentParser", "ArgumentParserTestHelpers"],
+            name: "AtlArgumentParserEndToEndTests",
+            dependencies: ["AtlArgumentParser", "AtlArgumentParserTestHelpers"],
             exclude: ["CMakeLists.txt"]),
         .testTarget(
-            name: "ArgumentParserUnitTests",
-            dependencies: ["ArgumentParser", "ArgumentParserTestHelpers"],
+            name: "AtlArgumentParserUnitTests",
+            dependencies: ["AtlArgumentParser", "AtlArgumentParserTestHelpers"],
             exclude: ["CMakeLists.txt"]),
         .testTarget(
-            name: "ArgumentParserPackageManagerTests",
-            dependencies: ["ArgumentParser", "ArgumentParserTestHelpers"],
+            name: "AtlArgumentParserPackageManagerTests",
+            dependencies: ["AtlArgumentParser", "AtlArgumentParserTestHelpers"],
             exclude: ["CMakeLists.txt"]),
         .testTarget(
-            name: "ArgumentParserExampleTests",
-            dependencies: ["ArgumentParserTestHelpers"],
+            name: "AtlArgumentParserExampleTests",
+            dependencies: ["AtlArgumentParserTestHelpers"],
             resources: [.copy("CountLinesTest.txt")]),
     ]
 )

@@ -11,7 +11,7 @@
 
 #if os(macOS)
 
-import ArgumentParser
+import AtlArgumentParser
 import Foundation
 
 // MARK: Command

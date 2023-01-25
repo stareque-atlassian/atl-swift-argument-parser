@@ -9,7 +9,7 @@
 //
 //===----------------------------------------------------------------------===//
 
-import ArgumentParser
+import AtlArgumentParser
 
 @main
 struct Repeat: ParsableCommand {

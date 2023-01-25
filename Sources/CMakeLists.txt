@@ -1,5 +1,5 @@
-add_subdirectory(ArgumentParser)
-add_subdirectory(ArgumentParserToolInfo)
+add_subdirectory(AtlArgumentParser)
+add_subdirectory(AtlArgumentParserToolInfo)
 if(BUILD_TESTING)
-  add_subdirectory(ArgumentParserTestHelpers)
+  add_subdirectory(AtlArgumentParserTestHelpers)
 endif()
